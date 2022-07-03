@@ -1,0 +1,66 @@
+@model IEnumerable<app01.Models.EmployeeModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div id="PlaceHolderHere"></div>
+
+
+<table class="table table-wrapper">
+    <div class="table-title">
+				<div class="row">
+					<div class="col-sm-6">
+						<h2>Manage <b>Employees</b></h2>
+					</div>
+					<div class="col-sm-6">
+					<button type="button" class="btn btn-success" data-toggle="ajax-modal" data-target = "#addEmployee" data-url="@Url.Action("Create")">Add Employee</button>
+												
+					</div>
+				</div>
+			</div>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model =>model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem  =>item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete" style="color: red;">&#xE872;</i></a>
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
