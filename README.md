@@ -9,6 +9,6 @@ $ dotnet run
 $ dotnet watch run
 
 ### Demo video
-[a link](https://drive.google.com/file/d/1IiNEdIWIJB0abICOewLo15RC2bgTCxtg/view?usp=sharing)
+https://drive.google.com/file/d/1IiNEdIWIJB0abICOewLo15RC2bgTCxtg/view?usp=sharing
 
 Happy Coding!!!
