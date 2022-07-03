@@ -2,5 +2,12 @@
 
 - Goal: *Features: Add Employee, Delete Employee
 
+## Steup
+To run this project:
+```
+$ dotnet run
+$ dotnet watch run
+
+
 
 Enjoy!!!
