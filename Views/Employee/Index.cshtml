@@ -57,8 +57,9 @@
                 @Html.DisplayFor(modelItem => item.Phone)
             </td>
             <td>
-                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete" style="color: red;">&#xE872;</i></a>
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+               
+               <button type="button" class="btn" data-toggle="ajax-modal" data-target = "#addEmployee" data-url="@Url.Action($"Delete/{item.Id}")"><i class="material-icons" data-toggle="tooltip" title="Delete" style="color: red;">&#xE872;</i></button>
+                @* <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> *@
             </td>
         </tr>
 }

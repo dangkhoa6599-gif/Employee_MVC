@@ -48,6 +48,7 @@ namespace app01.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            
             EmployeeModel emp = new EmployeeModel();
             return PartialView("_EmployeePartial", emp);
             
@@ -132,7 +133,7 @@ namespace app01.Controllers
                 return NotFound();
             }
 
-            return View(employeeModel);
+            return PartialView("_DeletePartial", employeeModel);
         }
 
         // POST: Employee/Delete/5
