@@ -9,7 +9,7 @@
 <img src="assets/Screenshot (4).png" width=600></img>
 #### Press Delete Button to delete employee
 <img src="assets/Screenshot (5).png" width=600></img>
-## Steup
+## Setup
 To run this project:
 ```
 $ dotnet run
